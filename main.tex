@@ -1,0 +1,779 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{comment}
+\usepackage{todonotes}
+\usepackage{amsmath}
+\usepackage[
+backend=biber,
+%style = numeric-comp,
+sorting = none,
+style=authoryear-comp,
+%style=nature,
+]{biblatex}
+%\usepackage[superscript, biblabel, nomove]{cite}
+\usepackage{caption}
+\usepackage{adjustbox}
+\usepackage{array}
+\usepackage{subcaption}
+\usepackage{parskip}
+\usepackage{graphicx} %package to manage images
+\graphicspath{ {./images/} }
+
+% packages, libraries needed for the picture :
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+
+\usetikzlibrary{fit}
+\usetikzlibrary{matrix}
+%set arrowtip here
+\tikzset{>=latex}
+
+\addbibresource{refs.bib} %Imports bibliography file
+
+
+\begin{comment}
+    The title encapsulates the main research question in up to 100 characters (including spaces)
+\end{comment}
+    
+\title{The effect of psilocybin on interoception using the heart rate discrimination task: A registered report study}
+\author{Xaver Funk  \and
+  Jesper Fischer Ehmsen
+    \and 
+  Josephine Marschall
+  \and
+  Suzanne Hoogeveen
+  \and
+  Micah Allen
+  \and
+  Michiel van Elk}
+%\date{January 2023}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Abstract}
+\begin{comment}
+    The abstract of your Stage 1 Registered Report protocol should not exceed 150 words and should not contain any references. It should start with a sentence that introduces the general topic and its significance for a broad audience. It should then describe the specific question(s) your research addresses, what you will do, and broadly, what results would confirm or disconfirm your hypotheses. The abstract can be brief and will be slightly revised at Stage 2 submission to include the results.
+\end{comment}
+% 31.07: 139 words
+%% general topic and significance for broad audience
+Psychedelic substances, including psilocybin, profoundly alter perception and consciousness and hold therapeutic potential for several disorders.
+Acute and post-acute changes in self-perception and interoceptive processing have been proposed as key factors underlying the therapeutic efficacy of psilocybin. 
+%Since interoception, the awareness of internal bodily signals such as heartbeat and respiration is a key aspect of self-perception, it might mediate these changes.
+%% specific questions we adress
+%Additionally, it has been proposed that psychedelics increase the contribution of bottom-up sensory information to perception, compared to high-level priors. %be more readily integrated into higher levels of the brain's cortical hierarchy/generative model. 
+% We will test this prediction with respect to interoception, expecting that (1) perceptual bias will reduce under psychedelics, while (2) response precision will decrease due to cognitive-attentional deficits induced by the drug.
+In this registered report study, we investigate the effects of psilocybin on interoceptive processing. We hypothesize that increased dosages of psilocybin will (1) reduce perceptual interoceptive bias and (2) decrease response precision.
+%% what we will do, our hypotheses how results would affect them
+Using a repeated-measures within-subjects design, 40 participants will complete a heart-rate discrimination task under different doses of psilocybin. This task allows us to separate perceptual bias and response precision in terms of the threshold and slope of an underlying psychometric function.
+Our hypotheses will be confirmed if (1) the threshold magnitude decreases and (2) the slope flattens for increased doses of psilocybin and disconfirmed if the results do not reflect these changes.
+%% implications
+The results of this study will increase our understanding of the mind-altering and therapeutic effects of psychedelics, as well as advance theories about bodily self-perception.
+
+\begin{comment}
+1. Theories
+2. we use a newly developed task
+3. to do what
+4. with the following hypotheses
+5. what results would (dis)confirm our hypotheses
+
+Changes in self-perception have been proposed to underlie the therapeutic utility of psychedelics.
+One aspect of self-perception that has recieved only little attention in the literature on psychedelics is interoception: the awareness of internal bodily signals, such as heartbeat and respiration. Interestingly, many disorders that are currently being investigated for the therapeutic application of psychedelics show alterations in interoceptive abilities, for example depression, anxiety and anorexia nervosa. Thus, both the acute effects of psychedelics on self-perception, as well as long-term therapeutic outcomes may be mediated by changes in interoception.
+    
+\end{comment}
+
+
+\section{Introduction}
+\begin{comment}
+    • The Introduction must include a review of the relevant literature that motivates the research question and a full description of the experimental aims (research questions) and hypotheses. 
+    Each research question must be motivated, explained and linked to specific hypotheses (predictions). The Introduction must contain a detailed description of these hypotheses: 
+    • Ensure that your predictions are defined precisely in terms of the specific independent and dependent variables. 
+    • Listing them as Hypothesis 1, Hypothesis 2 etc (with corresponding H0 in each case, as appropriate) is recommended.
+    • The description of hypotheses must commit to interpretation of all potential data patterns (those that are predicted and those that would run counter to predictions). You cannot interpret lack of evidence (e.g. a p>0.05 in a t-test) for the existence of an effect in null hypothesis significance testing as evidence for the absence of an effect. To be able to interpret data patterns other than the predicted effect or a significant difference in the opposite direction, you must commit to using Bayesian inferential methods or frequentist equivalence testing.
+    • Where you describe your hypotheses, you must include a call-out to the mandatory Design Table (Table 1) – below. 
+
+    • The only changes that will be allowed to your in-principle-accepted Stage 1 protocol when you resubmit at Stage 2 will be the tense of the sentences. In the Stage 1 protocol, describe the proposed research in the future tense to avoid confusion, e.g. with existing pilot data. 
+
+    • If the evidence you will present is correlational or cross-sectional, you must ensure not to use causal language or language that implies causality.
+
+    
+    • Your manuscript should NOT recycle text from your own or others’ previous publications without proper acknowledgment and citation of the original work. Note that text recycling from the authors’ own work is a form of plagiarism and must be avoided (see our policy here: https://www.nature.com/authors/policies/plagiarism.html). When reusing text verbatim, you must clearly indicate this in your manuscript and identify the original source. If the portion of reused text exceeds 80 words, you must seek permission from the publisher of the original work to reproduce the text.  -> QUESTION: Just to be sure, this does not hold for our unpublished grant application, right?
+
+    • The Introduction should not include any subheadings. 
+
+    • The Introduction (and the manuscript in its entirety) must not include priority or novelty claims (except in the case of genetic or archaeological discovery). 
+
+    • References in the main text should appear as superscript numerals, in order of mention. Only articles that have been published or accepted by a named publication or recognized preprint server should be in the reference list. If a manuscript is under consideration or not yet submitted, it should be mentioned in the main text only in parentheses, as follows: (Up to five author names, et al., unpublished manuscript). Published conference abstracts, numbered patents and research datasets that have been assigned a digital object identifier may be included in the reference list. 
+\end{comment}
+
+%Psychedelics frequently induce what has been termed 'body load', or the experience of melting.
+Throughout a psychedelic experience, effects on bodily perception are prominent, ranging from tickling sensations or heaviness in the extremities to a perceived dissolution of bodily boundaries or melting into the environment \parencite{preller2016phenomenology}.
+These effects have been recognized early on by researchers of the first wave of psychedelic research, captured anecdotally in quotes like \emph{"Gradually the feeling of the body vanished, [...] it could scarcely be separated from its surroundings."} or \emph{"There was nothing left of my body but a humming feeling; I had no bowels any more."} \parencite{guttmann1936mescaline}. Empirical studies have also documented changes in the body image (i.e., one's reflective beliefs about the body)  and the body schema (i.e., one's implicit sense of body ownership \parencite[for review, see][]{aday2021firsterarev, preller2016phenomenology}.
+However, even though psychedelics could be used as a tool for the study of body perception \parencite{aday2021firsterarev}, systematic research on the mechanisms underlying their effects is still lacking.
+
+\begin{comment}
+Preller \& Vollenweider 2016 chapter 4 for review of mostly German literature (Leuner, Fischer, Hermle)
+%Psychedelic substances, such as psilocybin and LSD produce profound alterations of perception and consciousness \parencite{preller2016phenomenology, kometer2016serotonergic, Vollenweider2020-oq} and may be effective for the treatment of a variety of mental health disorders \parencite{vanElk2022psychedelicsreview, +one}.
+%Next to the profound alterations of perception and consciousness induced by psychedelics, several recent randomized controlled clinical trials indicate their potential in assisting psychotherapy for the treatment of for instance, depression and alcohol use disorder \parencite{Davis2020-vj, bogenschutz2022percentage, goodwin2022single, vonrotz2023single}. % with AUD
+
+
+%Leading theories in the field propose that psychedelics catalyze these experiences by disintegrating self-related beliefs and their underlying neural processes either directly \parencite{Carhart-Harris2019-dq}, via feedforward sensory overload \parencite{Vollenweider2020-oq} or cortical network desynchronization \parencite{doss2021models}.
+
+## quotes from Guttmann 1936
+\emph{Gradually the feeling of the body vanished, the position of the limbs could not be localized; the posture of the body could hardly be determined; it could scarcely be separated from its surroundings.} or 
+\emph{There was nothing left of my body but a humming feeling; I had no bowels any more}
+
+Among the first subjective effects of psychedelics that people notice are bodily experiences (also captured in the concept of "body load"), such as tickling sensations or heaviness in the extremities. 
+At later stages in the trip, experiences such as the body melting into the environment/blurring of boundaries between body and the environment, or the mind even completely detaching from the body hint towards intense effects of psychedelics on the bodily self.    
+\end{comment}
+
+
+% a review of the relevant literature that motivates the research question
+% psi affect perception/consciousness
+% psi have therapeutic utility
+Next to the profound alterations of perception and consciousness induced by psychedelics, several recent randomized controlled clinical trials indicate their potential in assisting psychotherapy for the treatment of depression \parencite{Carhart-Harris2021-escital,Davis2020-vj, goodwin2022single, vonrotz2023single}.
+% therapeutic utility was suggsted to be mediated by effects on self-perception
+While results from these studies appear promising, with response rates between 37 and 71\% and remission rates between 29 and 58\%, the working mechanisms behind psychedelic-assisted psychotherapy (PAP) have remained elusive. On a neurobiological level, some authors suggest post-acute increases in neuroplasticity as a candidate mechanism \parencite{Olson2021-ig}, while others have proposed the acute effects on self-perception, including ego dissolution and unitive peak experiences as the key mechanism of action \parencite{Griffiths2006-hk, milliere2018psychedelics, preller2016phenomenology, Yaden2021-da}.
+In the current study, we propose to fill this knowledge gap about the working mechanisms of psychedelics. In order to do that, we assess the effects of psilocybin on interoceptive processing, a key element of the so-called bodily self, using a newly developed heart rate discimination (HRD) task.
+% theories psi
+\begin{comment}
+
+% but missing bodily self
+\begin{verbatim}
+    - read millere again and edit this paragraph
+\end{verbatim}
+However, the majority of investigations and discussions about these effects have focused on the narrative self \parencite{milliere2018psychedelics}, which relates to self-referential processes, including autobiographical memory retrieval and self-reflection \parencite{milliere2018psychedelics, milliere2017looking} and is supported by cortical midline structures pertaining to the default-mode network (DMN).
+
+leaving a knowledge gap regarding the bodily (or embodied) self, a concept relating to the awareness of oneself as an embodied agent situated in space \parencite{legrand2006bodily, seth2013interoceptive}, which might itself underlie the narrative self \parencite{allen2018body}
+\begin{verbatim}
+    - trying to figure out alternative
+\end{verbatim}
+\end{comment}
+
+%However, it is unclear how psychedelics cause these subjective effects on self-perception \parencite{}.
+Broadly, the self can be broken down into the narrative and bodily (or embodied) self \parencite{gallagher2000philosophical}.
+On the one hand, the narrative self relates to self-referential processes, including autobiographical memory retrieval and self-reflection \parencite{milliere2018psychedelics, milliere2017looking}.% and is supported by cortical midline structures pertaining to the default-mode network (DMN).
+The bodily self on the other hand involves the experience of owning a body situated in space, as well as bodily awareness, i.e. the awareness of any internal or external bodily sensation \parencite{legrand2006bodily, seth2013interoceptive}. % and is related to premotor cortex, insula, multisensory integration areas, such as temporal parietal junction, intraparietal sulcus, posterior cingulate cortex \parencite{park2019couplingNeuralsubstrates}
+%Notably, the bodily self has been attributed a more primary role, underlying the narrative self \parencite{allen2018body}. 
+Surprisingly though, most studies on the mechanisms of ego-dissolution experiences have focused on the narrative self using self-report measures to assess perceived subjective changes to the sense of self \parencite{ho2020bodily-self-psy}. 
+In the present study, we specifically focus on interoception, which can be defined as the perception and awareness of internal bodily signals, such as heart rate and respiration. 
+Crucially, the bodily self \parencite{allen2018body, park2019bodily-self-multisens}, including feelings of presence \parencite{seth2012interoceptive}, body ownership \parencite{apps2014free} and sense of embodiment \parencite{allen2018cognitivismEmbodied} rely on the successful integration of interoceptive and exteroceptive signals. %self-awareness \parencite{seth2012interoceptive, apps2014free, allen2018body, park2019bodily-self-multisens}. 
+% interoception, FEP, Allen/Tsakiris
+According to the free energy principle (FEP), this integration involves a process of minimisation of prediction errors arising from these signals \parencite{apps2014free}.
+%According to the theory of predictive processing, exteroceptive and interoceptive models of the bodily self are unified under the free energy principle (FEP) \parencite{allen2018body, allen2018cognitivismEmbodied}. 
+Similarly, on a predictive processing account of interoception,\parencite{allen2018body, allen2018cognitivismEmbodied}.
+interoceptive priors are crucial for homeostasis, the prime mechanism through which an organism keeps itself alive. Thus, this framework assigns interoceptive processing a privileged status within the cortical hierarchy.
+
+%attribute interoceptive priors a privileged status of within the cortical hierarchy, proposing that they are crucial for homeostasis, the prime responsibility of an organism trying to keep itself alive.
+
+% Now see the connection with psi theories: rebus
+The mechanism of action of psychedelics has also been framed under the FEP: according to the REBUS model \parencite[RElaxed Beliefs Under pSychedelics]{Carhart-Harris2019-dq}, the precision weighting of prior beliefs throughout the cortical hierarchy is relaxed by psychedelics, especially at higher levels. This disintegration of priors in turn leads acutely to a liberation of bottom-up information flow from sensory systems.
+% also for cstc, ccc
+Another prominent neuroscientific theory of psychedelics, the CSTC-model (cortico-striato-thalamo-cortical) %Other theories 
+suggests a similar pattern of increased bottom-up information flow and disintegration of higher-level systems under psychedelics, albeit through a different causal route, namely a reduction of thalamic gating leading to an amplification of both interoceptive and exteroceptive signals \parencite{Vollenweider2020-oq}.
+% link
+%Therefore, we propose a link between the acute psychedelic phenomenology of altered bodily awareness and sense of self and a disintegration of interoceptive priors, along with an increase in interoceptive bottom-up signaling.
+Such acute changes, broadly encompassing the disintegration of higher-level and increased bottom-up processing have been proposed to mediate long-term functional brain changes underlying therapeutic success \parencite{daws2021decreased, Carhart-Harris2019-dq}.
+The theoretical account of interoception and the bodily self under the FEP can thus help us understand the effects of psychedelics on body perception and the self.
+On this account, the acute psychedelic phenomenology of altered bodily awareness and sense of self results from a disintegration of interoceptive priors, along with an increase in interoceptive bottom-up signaling.
+
+% disorders
+%This link becomes even more apparent upon contemplating how several disorders associated with altered interoceptive abilities are being investigated as targets of psychedelics-assisted psychotherapy.
+Insight into the effects of psychedelics on interoception is relevant for understanding disorders that are characterised by altered interoceptive abilities \parencite{riva2018bodySelf, khalsa2018interoception, ho2020bodily-self-psy}.
+% disorders of interoception
+These include for example depression and anxiety \parencite{dunn2010InterocepAnxDep, paulus2010interoception, pollatos2007interoceptiveAnxiety}, body dysmorphic disorder \parencite{pratt2014interoceptiveBDD}, anorexia nervosa \parencite{pollatos2016atypicalInteroAnorex, khalsa2015alteredInteroAnorexiaOriginal}, addiction \parencite{stewart2020interoceptiveAddicitonOUD_StUD, verdejo2012role_intero_add, angioletti2021interoception_add_mech}, PTSD and childhood trauma \parencite{neukirch2019ptsdInteroceptionYoga, harricharan2021traumaSensoryprocessing, schmitz2023ptsd_childtrauma_intero, schaan2019childhoodTraumaInteroception}. % possibily more thorough
+% clinical trials
+Clinical trials investigating PAP for these disorders have either been recently completed (depression, anxiety: \parencite{Grob2011-lt, ross2016rapid, Davis2020-vj, Carhart-Harris2021-escital, goodwin2022single, vonrotz2023single}, addiction \parencite{bogenschutz2022percentage, Johnson2014-qi} body dysmorphic disorder \parencite{schneier2023pilotBDDpsilo}, anorexia nervosa: \parencite{peck2023AnorexiaNervosapsilocybinPhase1Pilot}) or are under way (anorexia nervosa: \parencite{insert ref to CT search} clinicaltrials.gov identifiers: NCT04052568, NCT04661514, NCT05481736, NCT04505189; PTSD: \parencite{insert ref to CT search}). % possibly a lot more
+% connect
+Thus, the wide range of clinical applications of PAP might be related to their effect on interoception and the bodily self.
+
+% taken together
+Taken together, changes in interoception may provide a mechanism mediating both the acute effects of psychedelics on self-perception and awareness, as well as their long-term therapeutic outcomes \parencite{ho2020bodily-self-psy}. % Maybe foreshadow this?
+However, direct evidence showing the effects of psychedelics on interoception is missing.
+% Interoception has been hard to measure
+\begin{comment}
+    from legrand 2022, https://www.sciencedirect.com/science/article/pii/S0301051121002325: 
+    - for review see Brener & Ring, 2016; Desmedt, Luminet, & Corneille, 2018; Desmedt, Corneille, et al., 2020; Ring & Brener, 2018; Zamariola, Maurage, Luminet, & Corneille, 2018.
+    # HBC
+    - Crucially, even when the heart rate is directly modulated by as much as 60 beats per minute (BPM) via pacemaker, counted heartbeats showed little alteration beyond expectations about different sitting or standing postures on the heart rate (Windmann, Schonecke, Fröhlig, & Maldener, 1999).
+    - A more accurate prior knowledge about one's heart rate, e.g. amongst medical practitioners or athletes, can influence HBC accuracy scores (Murphy et al., 2018), such that when explicitly instructing participants not to estimate beats, but to instead count felt ones, this bias is reduced (Desmedt et al., 2018).
+    - More recently, the validity of the HBC task has been further questioned by reports showing that interoceptive accuracy scores are largely driven by under-counting (Zamariola et al., 2018), suggesting that HBC-derived scores are merely a rough reflection of subjective beliefs about the heart rate (Desmedt, Luminet, Maurage, & Corneille, 2020).
+    - This poor construct validity could also explain why little to no relationship between HBC-derived scores and various psychiatric symptom measures has been found at the meta-analytic level (Desmedt, Houte, et al., 2020)
+
+    # HBD
+\end{comment}
+In this study, we aim to test whether psilocybin, one of the most widely investigated psychedelic substances in terms of its therapeutic, subjective and neural effects, acutely affects interoception in healthy adults. 
+
+%% Setup: 120 words 
+To this end, we will employ a recently developed experimental paradigm, the heart rate discrimination (HRD) task \parencite{legrand2022heart} using a repeated-measures, within-subjects design, administering 0, 5 and 10 mg of psilocybin. The HRD-task operationalizes interoception in terms of a participant’s ability to correctly identify whether a sequence of tones is faster or slower than their own heartbeat. Since this paradigm is designed as a 2-alternative forced-choice task, it allows us to describe interoceptive abilities in terms of the threshold and slope of a sigmoidal psychometric function underlying the responses. While the threshold reflects perceptual bias, i.e. the tendency to systematically under- or overestimate one’s heart rate, the slope captures both perceptual and response precision, reflecting the reliability of individual responses.
+
+%% Hypotheses: 89 words
+In line with theoretical accounts of psychedelics causing prior belief disintegration and increased bottom-up information flow \parencite{Carhart-Harris2019-dq, Vollenweider2020-oq}, we expect that perceptual bias will decrease with increased doses of psilocybin. At the same time, we expect that the response process %, including the cognitive judgement of the heard sequence 
+will become more error-prone due to cognitive-attentional deficits induced by psilocybin \parencite{carter2005att-wm-1a2a, quednow2012inhibition-deficits, barrett2018psidxm}.
+Operationalizing these mechanisms as changes in the threshold and slope of the psychometric function, we specifically predict that with increased doses of psilocybin (see also Table \ref{design_table}):
+\begin{enumerate}
+  \item The psychometric threshold $\alpha$ will move closer to 0, reflecting reduced perceptual bias
+  \item The psychometric slope $\beta$ will flatten, reflecting attentional and cognitive deficits
+\end{enumerate}
+
+%% Benefits/further advantages: 228
+Using this experimental design, we will be able to improve upon the limitations of previous interoceptive measurements and address challenges in research with psychedelic substances more generally.
+% improving upon prior measurements of interoception
+Firstly, interoceptive awareness has been notoriously difficult to measure and many classical paradigms suffer from poor construct validity \parencite{desmedt2018heartbeat, desmedt2020review}, often conflating cardiac beliefs (i.e., beliefs about one's heartrate) with accuracy \parencite{windmann1999dissociating}. 
+The HRD-task mitigates this problem, by offering a fairly good test-retest reliability and allowing for the differentiation between interoceptive accuracy and precision \parencite{legrand2022heart}. %3 possibly add like another improvement of this task
+\begin{comment}
+    % This is a prior version of this part, but the problem of cog-att deficits was too strongly posed and might have raised red flags
+% cog-att deficits
+Secondly, psilocybin induces cognitive-attentional deficits, a major hurdle for cognitive assessments under its influence \parencite{carter2005att-wm-1a2a, quednow2012inhibition-deficits, barrett2018psidxm} and its subjective effects enable participants to correctly guess their experimental condition, causing de-blinding \parencite{muthukumaraswamy2021blinding}. 
+% cog-att deficits: exteroceptive control
+In light these issues, we will take advantage of an exteroceptive control condition, which allows us to disentangle whether alterations in response precision are specific to interoceptive signals or more general, for example resulting from attentional or cognitive deficits. 
+% cog-att deficits: captured by slope
+Moreover, in line with hypothesis 2, we expect that these deficits will affect response precision and thus be captured in the slope, rather than in the threshold of the underlying sigmoidal curve. Thus, by both focusing on the threshold as the primary outcome measure and controlling for cognitive-attentional deficits with the exteroceptive control condition, we will be able to ameliorate this problem. 
+% cog-att deficits: low dose, de-blinding
+Lastly, by using doses in the low-to mid range, we further minimize the risk of psilocybin-induced attentional deficits. The differences between doses will be sufficiently small to reduce the participants’ and researchers’ ability to correctly guess their condition, thereby ameliorating the problem of breaking blind.
+\end{comment}
+% deblinding
+Secondly, in experimental studies psilocybin induces characteristic subjective effects that enable participants to correctly guess their condition (i.e., whether they are in the psilocybin or the placebo condition), which is known as de-blinding \parencite{muthukumaraswamy2021blinding}. 
+Therefore, here we chose to use low to medium dosages of psilocybin, reducing the participants’ and researchers’ ability to correctly guess the condition assignment.
+% cog-att deficits
+Using this dose range has the additional benefit that drug-induced cognitive-attentional deficits will remain limited thereby allowing participants to properly complete the experiment.
+We also expect in line with hypothesis 2 that cognitive-attentional deficits will affect response precision and thus be captured in the slope, rather than in the threshold of the underlying sigmoidal curve.
+In addition, we will explicitly account for attentional lapses in the model, which has been shown to improve parameter estimates in psychophysical models \parencite{wichmann2001psychometricLapse}.
+
+\begin{comment}
+%% DEPRECATED
+I re-phrased this in line with Eliska/Mariska's NHB publication, see above, keeping in mind the structure setup - hypotheses - benefits and approximating their word count on these.
+
+%% WHAT WE WILL DO
+In this study, we will start addressing this gap by examining whether psilocybin, one of the most widely investigated psychedelic substances in terms of its therapeutic, subjective and neural effects, acutely affects interoception in healthy adults. 
+% maybe put problems here first?
+However, interoceptive awareness has been notoriously difficult to measure \parencite{} and many classical paradigms suffer from low test-retest reliability \parencite{} and poor construct validity \parencite{}. In addition, psilocybin induces cognitive-attentional deficits, a major hurdle for cognitive assessments under its influence \parencite{barrett2018psidxm} and frequently causes participants and researchers to guess the experimental condition, effectively de-blinding them \parencite{muthukumaraswamy2021blinding}. 
+
+
+In order to attenuate these issues, we will employ a recently developed experimental paradigm, the heart rate discrimination (HRD) task \parencite{legrand2022heart} using a repeated-measures within-subjects design administering 0, 5, 10 and 15 mg of psilocybin. While the HRD-task offers fairly good test-retest reliability and allows differentiation between interoceptive accuracy and precision, we expect the relatively low doses in close proximity to one another to reduce the participants' and researchers' ability to correctly guess their condition.%, a common problem in studies investigating the acute effects of psychedelics \parencite{muthukumaraswamy2021blinding}.
+
+
+% the task
+%Specifically, we will employ a recently developed experimental paradigm, the heart rate discrimination (HRD) task \parencite{legrand2022heart} using a repeated-measures within-subjects design administering 0, 5, 10 and 15 mg of psilocybin. We expect these relatively low doses in close proximity to one another will reduce the participants' and researchers' ability to correctly guess their condition, a common problem in studies investigating the acute effects of psychedelics \parencite{muthukumaraswamy2021blinding}.
+
+The HRD-task operationalizes interoception in terms of a participant's ability to correctly identify whether a sequence of tones is faster or slower than their own heartbeat. 
+% 2AFC and sigmoidal
+Since this paradigm is designed as a 2-alternative forced-choice task, it allows describing interoceptive abilities in terms of the threshold and slope of a sigmoidal psychophysical function underlying the responses. While the threshold reflects perceptual bias (i.e., the tendency to systematically under- or overestimate one's heartrate), the slope captures both perceptual and response precision (i.e. the reliability of individual measurements).
+
+%% MITIGATING PROBLEMS IN PSYSCI
+% control with exteroceptive
+\begin{verbatim}
+    - possibly rephrase, reorder a bit
+\end{verbatim}
+The task also includes an exteroceptive control condition, which allows us to disentangle whether alterations in response precision are specific to interoceptive signals or more general, for example resulting from attentional or cognitive deficits. 
+This control condition is crucial, since such deficits are bound to occur under the influence of psilocybin, and represent a major hurdle for cognitive assessments of psychedelic states \parencite{carter2005att-wm-1a2a, quednow2012inhibition-deficits,  barrett2018psidxm}.
+% focus on threshold
+In addition, we expect that these deficits will affect response precision and thus be captured in the slope, rather than threshold of the underlying sigmoidal curve.
+Thus, by both focusing on the threshold as the primary outcome measure and controlling for cognitive-attentional deficits with the exteroceptive control condition, we will be able to circumvent this problem.
+% deblinding, moved up
+%Another common problem of current studies investigating acute psychedelic effects is that participants and researchers tend to break blind \parencite{muthukumaraswamy2021blinding}. To minimize this risk, we will use a repeated-measures within-subjects design, administering 0, 5, 10 and 15 mg of psilocybin. We expect these relatively low doses in close proximity to each other will reduce the participants' and researchers' ability to correctly guess their condition.
+
+%% HYPOTHESES
+In the original study, \textcite{legrand2022heart} observed an overall negative bias regarding heart rate discrimination in healthy volunteers. Following the theoretical accounts of psychedelics causing prior disintegration and increased bottom-up information flow, we expect that this bias will decrease. On the flipside, we expect that the response process (including cognitive judgement of the heard sequence) will become more error-prone due to cognitive-attentional deficits induced by psilocybin.
+
+These changes will be operationalized as changes in the threshold and slope of the sigmoidal psychophysical function underlying the response process. Hence, we specifically predict that with increased doses of psilocybin (see also Design Table 1):
+
+\begin{enumerate}
+  \item The threshold will move closer to 0, reflecting reduced perceptual bias
+  \item The slope will flatten, reflecting attentional and cognitive deficits
+\end{enumerate}
+
+
+
+\end{comment}
+
+
+\begin{comment}
+    • Ensure that your predictions are defined precisely in terms of the specific independent and dependent variables. 
+    • Listing them as Hypothesis 1, Hypothesis 2 etc (with corresponding H0 in each case, as appropriate) is recommended.
+    • The description of hypotheses must commit to interpretation of all potential data patterns (those that are predicted and those that would run counter to predictions). You cannot interpret lack of evidence (e.g. a p>0.05 in a t-test) for the existence of an effect in null hypothesis significance testing as evidence for the absence of an effect. To be able to interpret data patterns other than the predicted effect or a significant difference in the opposite direction, you must commit to using Bayesian inferential methods or frequentist equivalence testing.
+    • Where you describe your hypotheses, you must include a call-out to the mandatory Design Table (Table 1) – below. 
+\end{comment}
+
+
+%% INTRO CONCLUSION/IMPACT
+
+With this study design, we aim to provide results that extend theories on the mechanism of action of psychedelics and to test predictive processing models of interoception. Due to our focus on interoceptive bias, we will also be able to track belief changes under the influence of psychedelics. 
+% for psychedelics
+%Thus, this study can be seen as a direct confirmatory test of the general theoretical claim that psychedelics decrease prior belief precision and increase bottom-up signaling. 
+% less strong
+By providing data in alignment with the general theoretical claim that psychedelics decrease prior belief precision and increase bottom-up signaling, this study will pave the way towards a process-model of psychedelic action. % possibly more details here?
+% for interoception/embodiment/self
+Additionally, results of our study can be used to validate models of the self, by providing insight into interoception as one of its core elements.  % more details?
+Specifically, using psilocybin as our experimental intervention will induce both a homeostatic pertubation of interoceptive signals and an acute alteration of the self in a controlled, experimental setting.
+%Since our outcomes will be formalized properly to fit into current models of interoception and the bodily self, our results will thus be able to highlight the links between interoceptive accuracy and the structure of the self. 
+% therapeutics
+Lastly, our data will inform the therapeutic applications of psychedelics, by elucidating the possible contribution of interoception on both the acute mind-altering and long-term therapeutic effects of psychedelics. Thereby, our results could provide further evidence towards interoception as an unifying construct underlying different mental health conditions, as well as a putative target within psychedelic-assisted psychotherapy. % more?
+
+\section{Methods}
+
+\subsection{Ethics information}
+\begin{comment}
+    • If your protocol describes research with human participants, the Methods section must start with a statement confirming that the research complies with all relevant ethical regulations; naming the board and institution that approved the study protocol; and confirming that informed consent will be obtained from all human participants. Information on participant compensation must also be included. 
+    • If your manuscript reports the results of research with non-human animals, the Methods section starts with a statement confirming that the research complies with all relevant ethical regulations; naming the board and institution that approved the study protocol; and confirming that the ARRIVE guidelines were used to report the research.
+    • If your manuscript reports the results of a clinical trial, the Ethics information section also includes the trial registration number from ClinicalTrials.gov or an equivalent approved trials registry.
+\end{comment}
+This study has been approved as part of a larger protocol by the medical ethics committee UMC Amsterdam and complies with all relevant ethical regulations. Informed consent will be obtained from all participants and they will be compensated monetarily for their participation according to the usual hourly rates used at Dutch universities.
+
+\subsection{Pilot Data}
+
+\begin{comment}
+    • You may include pilot data, for example to demonstrate the feasibility of your approach. Your pilot studies and results should be described briefly in the main manuscript and reported in full in Supplementary Information. 
+    • Pilot data and custom analyses code should be made available and referred to in the Data Availability statement and Code availability statement. You may also include simulated data, for example to support your power analysis. This should also be made available.
+    • If you report analyses of pilot data using NHST (either in the main text or in Supplementary Information), you must report statistics in full: statistic(degrees of freedom) = value, p = value, effect size statistic = value, % Confidence Intervals = values
+\end{comment}
+
+\subsection{Design}
+\begin{comment}
+    • Your Methods section must include a description of experimental procedures in sufficient detail to allow another researcher to repeat the methodology exactly, without requiring further information other than that included in the protocol, your Supplementary Information file (if used) and, if applicable, the linked Code and Data (please refer to the Code Availability and Data availability statements below).
+    • Provide full descriptions of any outcome-neutral criteria and positive controls. These quality checks might include the absence of floor or ceiling effects in data distributions, positive controls, or other quality checks that are orthogonal to the experimental hypotheses. 
+    • You must have a statement on randomization in the Methods, if applicable.
+    • For experimental studies, make it clear whether the design is within-subjects, between-subjects, mixed, or other.
+    • You must have a statement indicating whether blinding will be used in the Methods, if applicable. If there will be no blinding, this must be clearly stated in the manuscript, as follows: "Data collection and analysis will not be performed blind to the conditions of the experiments.”
+    • If your manuscript reports the results of a Phase 2 or 3 randomized controlled trial, you should also attach the CONSORT checklist with your submission.
+\end{comment}
+
+%% General Design
+
+This study makes up part of a larger protocol employing a repeated-measures double-blind design, along with several neural (fMRI), behavioural and subjective measures, which will be reported elsewhere. After an initial intake session, on three experimental days, one of three doses of psilocybin (0, 5 or 10 mg) will be administered in a pseudo-randomized fashion. During the intake, participants will get the opportunity to practice the HRD-task. On study days, they will complete the task at around 180 minutes after substance administration. This time point is chosen to be after the peak drug effects have been reached and passed, improving task compliance. A washout period of at least one week will be maintained between sessions to avoid tolerance to the drug. Each study day will take place at the facilities provided at Spinoza centre Amsterdam, next to the Amsterdam University Medical Center, in an experimental lab refurbished to create a relaxed living room atmosphere, in line with recommended guidelines \parencite{johnson2008humanGuidelines}. Participants will stay under supervision of the study team until the acute effects of the drug have subsided completely. Throughout the study day, heart rate and blood pressure will be measured at specific time points, importantly also before and after completing the HRD-task.
+
+\begin{adjustbox}{center, caption={Design Table},float=table}
+\scriptsize
+\begin{tabular}{| m{.2\textwidth} | m{.2\textwidth} | m{.2\textwidth} | m{.2\textwidth} | m{.2\textwidth} |} 
+ \hline
+Question&Hypothesis&Sampling plan&Analysis Plan&Interpretation given to different outcomes \\
+ \hline\hline
+How does psilocybin affect the psychometric threshold $\alpha$ of heart rate discrimination?&The psychometric threshold $\alpha$ will move closer to 0, reflecting reduced perceptual bias&20 participants in one placebo and two seperate psilocybin dosing conditions (0, 5, 10 mg), based on financial and feasibility constraints, yielding a power to detect effect sizes of Cohen's $d = 0.57$ at $80\%$ and $d = 0.64$ at $95\%$ power and alpha-level of $0.05$.&Hierarchical Bayesian model fitting group-level differences $\Delta\alpha_{k}$ for each psilocybin condition ($k \in {1, 2}$), compared to placebo. Draws from these posterior difference distributions will be compared to alpha level of 0.05.&If less than 5\% of posterior difference draws are below 0, we will assume there is a positive difference between the compared conditions, such that the drug condition has an increased group-level threshold compared to placebo.\\ \hline
+How does psilocybin affect the psychometric slope $\beta$ of heart rate discrimination?&The psychometric slope $\beta$ will flatten, reflecting attentional and cognitive deficits&20 participants in one placebo and two seperate psilocybin dosing conditions (0, 5, 10 mg), based on financial and feasibility constraints, yielding a power to detect effect sizes of Cohen's $d = 1.19$ at $80\%$ and $d = 1.60$ at $95\%$ power and alpha-level of $0.05$.&Hierarchical Bayesian model fitting group-level differences $\Delta\beta_{k}$ for each psilocybin condition ($k \in {1, 2}$), compared to placebo. Draws from the posterior difference distribution will be compared to alpha level of 0.05.&If less than 5\% of posterior difference draws are below 0, we will assume there is a positive difference between the compared conditions, such that the drug condition has an increased group slope compared to placebo. \\ \hline
+\end{tabular}\label{design_table}
+\end{adjustbox}
+
+%% Task
+
+In order to estimate interoceptive accuracy and precision, we employ the interoceptive condition of the recently developed HRD-task \parencite{legrand2022heart}. In a two-interval forced choice (2-IFC) design, the subject is instructed to attend to their heart rate for 5 seconds while it is being recorded via a soft-clip pulse oximeter placed on one of the fingers of their non-dominant hand. They are then presented with five auditory feedback tones of a different frequency than their heart rate. While listening, the subject then indicates whether the tones are of a higher or lower frequency than their heart rate (8 s) by indicating \emph{faster} or \emph{slower} respectively, by pressing one of two response buttons with their right hand as soon as possible. We will denote the difference in beats per minute ($\Delta BPM$) between the measured heart rate and the feedback sequence on a given trial as an \emph{interval}.
+
+%To control for working memory and temporal estimation biases, this procedure is repeated in an exteroceptive condition where the subject attends to a sequence of auditory tones (3 – 7 s) instead of their heart rate and is similarly asked if a feedback sequence is of higher or lower frequency. In both conditions, 
+
+The frequency of the feedback tones is adjusted according to an adaptive Bayesian staircase procedure (Psi) \parencite{kontsevich1999bayesian}, estimating the threshold $\alpha$ and slope $\beta$ of the underlying psychometric function throughout the experiment in order to optimize sampling. The threshold represents the point of subjective equality (PSE), indicating the bias and sensitivity of the perceptual process. Hence, a positive threshold would indicate over- and a negative threshold underestimation of the heart rate. The slope indicates the precision or uncertainty of the perceptual decision process, with a steeper slope reflecting higher precision. The Psi staircase is initialized such that the prior for $\alpha$ is uniformly distributed between -50.5 and 50.5, with a step size of 1 BPM (beats per minute), and the prior for $\beta$ is uniformly distributed between 0.1 and 25 with a step size of 0.1. In addition, the subject is asked to give a confidence rating regarding their choice on a scale from 0 to 10, with 0 labeled as ‘Guess’ and 10 labeled as ‘Certain’. The threshold, slope and confidence rating are the outcome variables of this task. While we have specific predictions about the threshold and slope, we treat the confidence ratings as exploratory. We will use a total of 120 trials, including 24 catch trials and 96 Psi-trials, which takes about 30 minutes to complete. Catch trials are unaffected by the Psi procedure and have a fixed frequency difference. They represent 'easy' trials interspersed with the rather difficult Psi trials that are expected to sample near the PSE and help to keep participants engaged in the procedure.
+% the experiment is implemented in ...
+      
+%% Subjective
+
+We will also include a set of questions related to our participant's perceived ability to feel their heart beat, the emotional valence attributed to it and their expectations regarding the effect on psilocybin. Of these questions, 7 will be asked at baseline and 5 after each experimental session (see table \ref{subj_assessments}). In addition, participants will be provided with a visual representation of a body on paper and are asked to indicate at which location they felt their heart beat (see supplementary figure \ref{}). Lastly, participants will complete the 11-ASC questionnaire, to assess subjective drug effects \parencite{studerus2010psychometric}.
+
+\begin{center}
+\scriptsize
+\label{subj_assessments}
+\caption{Self-constructed questions asked at baseline and after the task}
+\begin{tabular}{ | m{.5\textwidth} | m{.2\textwidth}| m{.2\textwidth} | } 
+ \hline
+ Question & Timepoint & Responses \\ 
+ \hline\hline
+ How intensely do you usually feel your heartbeat? & at baseline & 5-point Lickert \\\hline
+ How difficult is it to detect your own heartbeat? & at baseline & 5-point Lickert \\\hline
+ When you notice your heartbeat, does it make you feel more or less anxious/uneasy than usual? & at baseline & more / less \\\hline
+ When you notice your heartbeat, how much more/less anxious/uneasy than usual do you feel? & at baseline & 5-point Lickert \\\hline
+ In your daily life, do you wear a smartwatch? & at baseline & yes / no \\\hline
+ Do you think psilocybin will increase or decrease your heartrate? & at baseline & increase / decrease \\\hline
+ Do you think psilocybin will increase or decrease your ability to detect your heartrate? & at baseline & increase / decrease \\\hline
+ I felt my heartbeat more intensely than usual & after HRD-task & 5-point Lickert \\  \hline
+ I got worried when feeling my heartbeat & after HRD-task & 5-point Lickert \\\hline
+ I enjoyed feeling my heartbeat & after HRD-task & 5-point Lickert \\\hline
+ I was able to judge my heartrate better than usual & after HRD-task & 5-point Lickert \\\hline
+ I felt my heart beat in places where I usually do not & after HRD-task & 5-point Lickert \\
+ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Sampling Plan}
+\begin{comment}
+    • Studies involving Neyman-Pearson inference must include a statistical power analysis. Estimated effect sizes should be justified with reference to the existing literature. Since publication bias overinflates published estimates of effect size, power analysis must be based on the lowest available or meaningful estimate of the effect size. For frequentist analysis plans, the a priori power must be 0.95 or higher for all proposed hypothesis tests. In the case of highly uncertain effect sizes, a variable sample size and interim data analysis is permissible but with inspection points stated in advance, appropriate Type I error correction for ‘peeking’ employed, and a final stopping rule for data collection outlined.
+    • Methods involving Bayesian hypothesis testing are encouraged. For studies involving analyses with Bayes factors, the predictions of the theory must be specified so that a Bayes factor can be calculated. Authors should indicate what distribution will be used to represent the predictions of the theory and how its parameters will be specified.   For inference by Bayes factors, authors must be able to guarantee data collection until theBayes factor is at least 10 times in favour of the experimental hypothesis over the null hypothesis (or vice versa). Authors with resource limitations are permitted to specify a maximum feasible sample size at which data collection must cease regardless of the Bayes factor; however to be eligible for advance acceptance this number must be sufficiently large that inconclusive results at this sample size would nevertheless be an important message for the field.
+    • Regardless of sampling method, you must list all criteria for data inclusion and/or data exclusion and how this affects your sampling strategy. This includes a full description of proposed sample characteristics. Procedures for objectively defining exclusion criteria due to technical errors or for any other reasons must be specified, including details of how and under what conditions data would be replaced. These details must be summarized in the mandatory Design table (Table 1).
+\end{comment}
+
+%Re-do the power analysis with group-level estimates
+
+% Option 1: based on rm-ANOVA
+%Based on our analysis plan, we will first derive individual session-level estimates of interoceptive and exteroceptive bias and precision. Next, we will perform a repeated-measures ANOVA (rmANOVA) with 3 within-subject levels reflecting the different dosing conditions of 0, 5 and 10 mg to assess the effect of psilocybin on those estimates. Due to financial and feasibility contraints, we can include a sample size of 20 particiapnts in this study. To assure adequate power for our main hypothesis 1, we performed a power analysis based on the planned rmANOVA. From the literature and personal communication, we found $r= ??$ to be a reasonable value for the correlation between individual sessions. With this $r$ and a smaple size of $N = 20$ we will be able to recover moderate effect sizes with a Cohen's $f > ??$.
+
+
+%Based on financial and feasibility constraints, we can include a sample size of 20 participants in this study. To assure adequate power for hypothesis 1 we hence performed a power analysis based on that sample size and our analysis plan given below. We estimated effect sizes on the $\alpha$ and $\beta$ parameter from 1750 simulations of 20 participants going through the study. To imitate the Bayesian staircase procedure in the simulation process, we simulated stimulus values $x_i$ based on draws from the variational Bayesian posterior distribution obtained through Pathfinder \parencite{zhang2022pathfinder}. This meant sampling the stimuli values from a normal distribution with the following parameterization: $x_i \sim\mathcal{N} (\alpha_d,\beta_d)$, where $\alpha_d$ and $\beta_d$ are random draws for the respective parameter from the variational posterior. The results, displayed in supplementary figure \ref{}, indicate that for the threshold, we will be able to recover effect sizes of Cohen's d = 0.57 and 0.64 at an alpha level of 0.05 and a power of 80\% and 90\%, respectively. Hence, regarding our key hypothesis 1, we will be able to recover moderate to large effect sizes. For our secondary hypothesis 2 concerning the slope, we will be able to recover effect sizes of Cohen's d = 1.19 and 1.60 at the same alpha and power levels.
+
+Based on financial and feasibility constraints, we can include a sample size of 20 participants in this study. To assure adequate power for our primary hypothesis 1 we hence performed a power analysis based on that sample size and our analysis plan given below.
+Since our model estimates both parameters simultaneously, we calculated power with respect to both hypotheses, i.e. group-level decreases in the psychometric threshold $\alpha$ (expressed in $\Delta BPM$) and flattening of the psychometric slope $\beta$ across sessions of increased psilocybin dosage. For both outcomes, we derived a power curve at an alpha level of 0.05 and investigated posterior draws of this curve for 80\% and 95\% power.
+In order to achieve this, we generated 1750 simulations of 20 subjects each going through 2 sessions of 120 trials of the HRD-task using the hierarchical Bayesian model provided in our analysis plan (\ref{analysis}).
+We first reanalyzed the data from \textcite{legrand2022heart}, where participants went through two subsequent sessions, using our hierarchical framework. This yielded the following representative estimates of baseline group-level parameters used in our simulations:
+%% Simulation parameters  %%
+\begin{align*} 
+\mu_{\alpha} &\sim \mathcal{N} \left(-7.79,0.78\right) \\
+\mu_{\beta} &\sim \mathcal{N} \left(2.24,0.04\right) \\
+\mu_{\lambda} &\sim \mathcal{N} \left(-4.23,0.39\right) \\
+\sigma_{\alpha} &\sim \mathcal{N}^+ \left(9.8,0.47\right) \\
+\sigma_{\beta} &\sim \mathcal{N}^+ \left(0.33,0.04\right) \\
+\sigma_{\lambda} &\sim \mathcal{N}^+ \left(1.1,0.39\right)
+\end{align*}
+With $\mathcal{N}$ and $\mathcal{N^+}$ indicating the Normal and 0-truncated positive Normal distributions, respectively.
+In addition, our hierarchical model drastically improved the session-by-session correlation of the slope parameter to $r_\beta=0.34$, while the correlation for the threshold remained similar to the value reported in \textcite{legrand2022heart} with $r_\alpha =  0.5$. We used these newly estimated values as test-retest correlations in our simulations.
+To imitate the Bayesian staircase procedure used in the task during our simulation process, we simulated stimulus values $x_j$ based on draws from the variational Bayesian posterior distribution obtained through Pathfinder, a method that also optimizes sampling \parencite{zhang2022pathfinder}. 
+We ensured that all of our simulations gave reasonable estimates by discarding those (253) that either ended with divergent transitions or had $\hat{R}$ values above 1.02. 
+Next, we analyzed these simulated data in accordance with our analysis plan in section \ref{analysis}.
+
+In order to obtain a power curve, we generated 200 samples from the posterior difference distributions of each parameter. With these, we estimated the probability that a given effect size produced posterior difference draws less than 0 expressed as a percentage of the total draws and compared it to the alpha level (0.05) for both threshold and slope parameters.
+Specifically, we modeled this using a cumulative Normal distribution over effect size estimates that indicates the probability of getting a significant result at the given effect size.
+The resulting power curves, displayed in figure \ref{power-curve}, indicate that for the threshold, we will be able to recover effect sizes of Cohen's d = 0.57 and 0.64 at an alpha level of 0.05 and a power of 80\% and 90\%, respectively. Hence, regarding our key hypothesis 1, we will be able to recover moderate to large effect sizes. For our secondary hypothesis 2 concerning the slope, we will be able to recover effect sizes of Cohen's d = 1.19 and 1.60 at the same alpha and power levels.
+
+\begin{figure}
+\label{power-curve}
+\includegraphics[width=\textwidth]{Power-curve.PNG}
+\centering
+\caption{Power curves concerning psychometric slope $\beta$ and threshold $\alpha$. Dashed lines indicate 80\% and 95\% power thresholds. Grey lines reflect individual draws from the cumulative Normal distribution over effect size estimates and colored lines their respective means.}
+\end{figure}
+
+
+\subsection{Analysis Plan} \label{analysis}
+\begin{comment}
+    • Your proposed analysis pipeline must include all pre-processing steps, and a precise description of all planned analyses (including appropriate correction for multiple comparisons if applicable). Any covariates or regressors must be stated. Where analysis decisions are contingent on the outcome of prior analyses, these contingencies must be specified and adhered to. 
+    • Do not include exploratory analyses in the Stage 1 protocol. These should be reported in the Stage 2 manuscript, under the heading Exploratory Analyses.
+    
+    Should you need to deviate in any way from the description of your work in the Methods after acceptance in principle, you must seek editorial feedback first (before implementing these changes). 
+\end{comment}
+\tikzstyle{circ}=[circle, draw, minimum size=1.2cm]
+\tikzstyle{rect}=[rectangle, draw, minimum size=1cm]
+% version consistent with legrand and my personal preferences
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+    [scale=1, every node/.style={scale=1}, square/.style={regular polygon,regular polygon sides=4}] % scale matrix and/or nodes here
+                
+        \matrix (p) [
+            ampersand replacement = \&,
+            matrix of math nodes,
+            nodes in empty cells,
+            column sep      = .25cm, % change distance of nodes from each other here
+            row sep         = .5cm, % change distance of nodes from each other here
+            matrix anchor=north,
+            anchor=base
+        ] at (0,5)
+        % nodes
+        % usage:  |[*node options*]| {*text in node*} 
+        {
+         |[circ, draw]| {\alpha_{Pl}} \& |[circ, draw]| \Delta\alpha_{k}  \& |[circ, draw]| {\beta_{Pl}} \&|[circ, draw]| \Delta\beta_{k}  \& |[circ, draw]| {\lambda_{Pl}} \& |[circ, draw]| \Delta\lambda_{k}  \\
+        };
+        \matrix (m) [
+            ampersand replacement = \&,
+            matrix of math nodes,
+            nodes in empty cells,
+            column sep      = .25cm, % change distance of nodes from each other here
+            row sep         = .5cm, % change distance of nodes from each other here
+            %matrix anchor=base
+        ]
+        % nodes
+        % usage:  |[*node options*]| {*text in node*} 
+        {
+%          |[circle, draw]| {\alpha_{P}} \& |[circle, draw]| \Delta\alpha_{k}  \& |[circle, draw]| {\beta_{P}} \& \&|[circle, draw]| \Delta\beta_{k}  \& |[circle, draw]| {\lambda_{P}} \& |[circle, draw]| \Delta\lambda_{k}  \\
+            \&  \&  \&  \&  \& \&\\
+            \& \& |[circ, draw]| \alpha_{ki}  \& |[circ, draw]| \beta_{ki}   \& |[circ, draw]| \lambda_{ki}  \&  \&\\
+            \&  \& |[rect, draw, fill=gray!20]| x_{kij} \& |[circ, draw]| P_{kij} \&  \&  \&  \\
+            \&  \&  \& |[circ, draw, fill=gray!20]| r_{kij} \&  \&  \& \\
+            \&  \&  \& |[rect, draw, fill=gray!20]| n_{kij} \&  \&  \& \\
+        };
+        % edges to \alpha
+        \draw[->] (p-1-1) to (m-2-3);
+        \draw[->] (p-1-2) to (m-2-3);
+        % edges to \beta
+        \draw[->] (p-1-3) to (m-2-4);
+        \draw[->] (p-1-4) to (m-2-4);
+        % edges to \lambda
+        \draw[->] (p-1-5) to (m-2-5);
+        \draw[->] (p-1-6) to (m-2-5);
+        %edges to P
+        \draw[->] (m-2-3) to (m-3-4);
+        \draw[->] (m-2-4) to (m-3-4);
+        \draw[->] (m-2-5) to (m-3-4);
+        \draw[->] (m-3-3) to (m-3-4);
+        % edge to R
+        \draw[->] (m-3-4) to (m-4-4);
+        \draw[->] (m-5-4) to (m-4-4);
+
+        %\draw[->] (p-1-1) to (m-4-4); % drawing between matrices p and m
+        \pgfsetcornersarced{\pgfpoint{5mm}{5mm}}
+        
+        % box around whole matrix
+  %      \node[draw=black, fit=(p-1-1) (p-1-6) (m-5-4) (m-5-7), inner sep=6mm] (box1){};
+  %      \node[rotate = 90, anchor = west] at (3.5,-3) {k conditions};%(m-4-7.east) {k conditions};
+        % box around alpha, beta, gamma, p, r
+        \node[draw=black, fit=(m-2-2) (m-2-3) (m-2-6) (m-5-4) (m-5-6), inner sep=4mm] {};
+        \node[rotate = 90, anchor = west] at (2.35,-3) {i subjects}; %(m-4-6.east) {i subjects};
+        % box around p, r
+        \node[draw=black, fit=(m-3-3)  (m-3-4) (m-5-5) (m-5-4) (m-5-5), inner sep=2mm] {};
+        \node[rotate = 90, anchor = west] at (1.2,-3) {j intervals}; %(m-4-5.east) {j intervals};
+    \end{tikzpicture}
+    \caption{Plate diagram of hierarchical Bayesian model used for analysis: We will model the observed responses $r_{kij}$ across intervals $x_{kij}$ in terms of interoceptive bias $\alpha$ and precision $\beta$, as well as lapse rates $\lambda$ within $i$ subjects and $k$ conditions.
+    Per condition and subject, $\alpha_{ki}$, $\beta_{ki}$, $\lambda_{ki}$ are sampled from a sum of the respective group-level placebo ($\alpha_{Pl}$, $\beta_{Pl}$, $\lambda_{Pl}$) and difference distributions ($\Delta\alpha_{k}$, $\Delta\beta_{k}$, $\Delta\lambda_{k}$). In this way, group-level effects of interest are captured by the corresponding posterior difference distributions. Circles represent random and rectangles fixed variables, while shading indicates that a variable is observed directly.}
+    \label{fig:plateForPowerAnalysis}
+\end{figure}
+
+Our analysis will mostly follow the procedure used in \textcite{legrand2022heart}, while adapting their model to a hierarchical scheme in order to estimate group-level parameters across psilocybin conditions, as well as explicitly modeling attentional lapse rates \parencite{wichmann2001psychometricLapse}.
+Specifically, we will perform a post-hoc Hierarchical Bayesian analysis to estimate the psychophysical function underlying the response process per participant and session. 
+%Here, we will model subjects using a multivariate normal distribution, estimating group and subject level parameters for each session. 
+We decided to not model the relationship between condition (drug effect) as a linear or non-linear dependency, since the functional relationship between drug dosage and parameters of the psychometric function is unknown. 
+Therefore, to investigate the two hypotheses we will compare the group level posterior differences between sessions for the threshold and slope.
+
+% cleaning
+Before entering data into the model, we will follow the data cleaning procedure used in \textcite{legrand2022heart}. Trials with either an answer latency of less than 100 ms or containing unreliable cardiac signals will be excluded. For this, we apply the absolute deviation around the median rule \parencite{leys2013detecting} to both estimated heart rate and heart rate variability within each interoceptive trial.
+
+Next, we model the trial-wise responses as a Bernoulli process governed by a hierarchical Bayesian psychometric model as follows:
+\[
+%R_t \sim Bern(\Phi(x_t;\lambda, \alpha, \beta))
+r_{kij} \sim Bern(P(x_{kij};\lambda_{ki}, \alpha_{ki}, \beta_{ki}))
+\]
+Where $r_{kij}$ is the given response (faster or slower) of a subject $i$ at interval $j$ in condition $k$ and $x_{kij}$ is the difference in beats per minute ($\Delta BPM$) of a given interval, i.e. the difference between measured heart rate and given feedback sequence of that trial. This can be expressed equivalently as a Binomial process with $n_{kij}$ trials per interval:
+\[
+%R_t \sim Bern(\Phi(x_t;\lambda, \alpha, \beta))
+r_{kij} \sim Binom(P(x_{kij}, n_{kij};\lambda_{ki}, \alpha_{ki}, \beta_{ki}))
+\]
+In both expressions, $P_{kij}$ denotes the probability of a participant indicating the feedback sequence to be \emph{faster} than their heartrate for a given interval $x_{kij}$ and is governed by subject-level parameters $\lambda_{ki}$, $\alpha_{ki}$ and $\beta_{ki}$:
+\[
+P_{kij}(x_{kij};\lambda_{ki}, \alpha_{ki}, \beta_{ki}) = \lambda_{ki} + (1 - 2 \lambda_{ki}) \cdot \Phi(x_{kij};\alpha_{ki}, \beta_{ki})
+\]
+Here, $\lambda_{ki}$ models lapse rates per participant and session and $\Phi(x_{kij};\alpha_{ki}, \beta_{ki})$ is the cumulative normal distribution, instantiating a sigmoidal psychometric curve over intensities $x_{kij}$ with threshold $\alpha_{ki}$ and slope $\beta_{ki}$, with $erf$ referring to the Gaussian error function:
+\[
+\Phi(x_{kij};\alpha_{ki}, \beta_{ki}) = 
+\frac{1}{2} 
+\cdot 
+\left(1+erf\left(\frac{x_{kij}-\alpha_{ki}}{\beta_{ki} \cdot \sqrt{2}}\right)\right)
+\]
+
+The subject-level parameters are sampled from condition-level parameters with $k := \{0, 1, 2\}$ coding for the respective psilocybin condition, specifically $k=0$ for placebo, $k=1$ for 5 mg and $k=2$ for 10 mg psilocybin, which triggers the respective dummy variables $C_1$ and $C_2$ to be either 0 or 1. As such, the psilocybin conditions will be modeled explicitly in terms of their differences $\Delta\alpha_{k=1}$ and $\Delta\alpha_{k=2}$ to the placebo condition:
+\begin{align*}
+\alpha_{ki} &\sim  \alpha_{Pl} + C_1 \Delta\alpha_{k} + C_2 \Delta\alpha_{k} \\
+\beta_{ki} &\sim \exp(\beta_{Pl} + C_1 \Delta\beta_{k} + C_2 \Delta\beta_{k}) \\
+\lambda_{ki} &\sim \text{logit}^{-1}(\lambda_{Pl} + C_1 \Delta\lambda_{k} + C_2 \Delta\lambda_{k})/2\\ 
+C_1 &:= \begin{cases}
+    1,& \text{if } k = 1\\
+    0,& \text{otherwise}
+\end{cases} \\
+C_2 &:= \begin{cases}
+    1,& \text{if } k = 2\\
+    0,& \text{otherwise}
+\end{cases}
+\end{align*}
+
+
+We will model the logarithm of the slope, ensuring it remains strictly positive. Similarly, to ensure that the lapse rate remains bounded between [0 ; 0.5] we will apply the logit transformation scaled by 2.
+We will parameterize the model using a multivariate Gaussian over group-level parameters $\alpha_{Pl}, \beta_{Pl}, \lambda_{Pl}, \Delta\alpha_{k}, \Delta\beta_{k}$ and $\Delta\lambda_{k}$ as follows:
+
+% parameters to fit and covariance matrix
+\[
+\begin{pmatrix}
+\alpha_{Pl} \\ 
+\beta_{Pl} \\ 
+\lambda_{Pl} \\ 
+\Delta\alpha_{k} \\ 
+\Delta\beta_{k} \\ 
+\Delta\lambda_{k} \\ 
+\end{pmatrix}
+\sim
+\mathcal{N}
+\left(
+\begin{pmatrix}
+\mu_{\alpha_{Pl}} \\ 
+\mu_{\beta_{Pl}} \\ 
+\mu_{\lambda_{Pl}} \\ 
+\mu_{\Delta\alpha_{k}} \\ 
+\mu_{\Delta\beta_{k}} \\ 
+\mu_{\Delta\lambda_{k}} \\ 
+\end{pmatrix},
+\begin{bmatrix}
+\sigma_{\alpha_{Pl}}^2 & . & . & . & . & .\\
+. & \sigma_{\beta_{Pl}}^2 & . & . & . & . \\
+. & . & \sigma_{\lambda_{Pl}}^2 &  . & . & . \\
+. & . & . & \sigma_{\Delta\alpha_{k}}^2 & . & . \\
+. & . & . & . & \sigma_{\Delta\beta_{k}}^2 & . \\
+. & . & . & . & . & \sigma_{\Delta\lambda_{k}}^2\\
+
+\end{bmatrix}
+\right)
+\]
+Where the dots represent the covariances of all parameters with each other, omitted for clarity. We decompose the covariance matrix $\Sigma$ into a product of the correlation matrix $\Omega$ and diagonal matrix $D$, containing the standard deviations along the main diagonal in the following way:%, allowing for the use of Cholesky factorization:
+% \[
+% \Sigma = 
+% \begin{bmatrix}
+% \sigma_{\alpha_c} & 0 & 0\\
+% 0  & \sigma_{\beta_c} & 0 \\
+% 0 & 0 & \sigma_{\lambda_c} \\
+% \end{bmatrix}
+% \ 
+% \cdot
+% \Omega
+% \cdot
+% \begin{bmatrix}
+% \sigma_{\alpha_c} & 0 & 0\\
+% 0  & \sigma_{\beta_c} & 0 \\
+% 0 & 0 & \sigma_{\lambda_c} \\
+% \end{bmatrix}
+% \]
+\begin{align*}
+  \Sigma &= D \cdot \Omega \cdot D   \\
+  D &= \begin{bmatrix}
+\sigma_{\alpha} & 0 & 0 & 0 & 0 & 0 &0\\
+0 & \sigma_{\beta} & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & \sigma_{\lambda} &  0 & 0 & 0 & 0\\
+0 & 0 & 0 & \sigma_{\Delta\alpha_{c1}} & 0 & 0 &0\\
+0 & 0 & 0 & 0 & \sigma_{\Delta\alpha_{c2}} & 0 &0\\
+0 & 0 & 0 & 0 & 0 & \sigma_{\Delta\beta_{c1}} &0\\
+0 & 0 & 0 & 0 & 0 & 0 & \sigma_{\Delta\beta_{c2}}\\
+\end{bmatrix}
+\end{align*}
+
+With the correlation matrix $\Omega$ having a Cholesky factorization:
+\[
+\Omega = L \cdot L^T
+\]
+
+This allows us to assign the $LKJ$-prior on the lower triangular matrix $L$, improving numerical stability during model fitting \parencite{lewandowski2009lkj}. The full list of priors is given by the following:
+
+%% Priors
+\begin{align*} 
+\mu_{\alpha_{Pl}} &\sim \mathcal{N}\left(0,20\right) \\
+\mu_{\beta_{Pl}}  &\sim \mathcal{N} \left(0,3\right) \\
+\mu_{\lambda_{Pl}}&\sim \mathcal{N} \left(-3,2\right) \\
+\mu_{\Delta\alpha_{k}} &\sim \mathcal{N} \left(0,5\right) \\ 
+\mu_{\Delta\beta_{k}} &\sim \mathcal{N} \left(0,5\right)\\ 
+\mu_{\Delta\lambda_{k}} &\sim \mathcal{N} \left(0,5\right)\\ 
+\sigma_{\alpha_{Pl}} &\sim \mathcal{N}^+ \left(0,10\right) \\
+\sigma_{\beta_{Pl}} &\sim \mathcal{N}^+\left(0,3\right) \\
+\sigma_{\lambda_{Pl}}&\sim\mathcal{N}^+\left(0,3\right) \\
+\sigma_{\Delta\alpha_{k}} &\sim \mathcal{N} \left(0,5\right) \\ 
+\sigma_{\Delta\beta_{k}} &\sim \mathcal{N} \left(0,5\right)\\ 
+\sigma_{\Delta\lambda_{k}} &\sim \mathcal{N} \left(0,5\right)\\ 
+L &\sim LKJ \left(2\right)
+\end{align*}
+
+Where $\mu$ and $\sigma$ indicate the means and standard deviations of the respective parameters.
+After fitting this model to the cleaned data, we will draw samples from the posterior difference distributions $\Delta\alpha_{k}$ and $\Delta\beta_{k}$ for each condition in order to assess the predicted group-level changes for $\alpha$ and $\beta$ across psilocybin conditions. Specifically, we will generate 1000 draws from the posterior difference distributions. If less than 5\% of posterior difference draws are below 0, we will assume there is a positive difference between the compared conditions, such that the drug condition has an increased group threshold slope compared to placebo. This procedure is comparable to a one-sided t-test.
+We will proceed in the same way with the posterior difference distributions for the $\lambda$ parameter, but treat the outcomes as descriptive. Total scores and individual factors of the 11-ASC will be reported as descriptive variables on the group- and individual level.
+In addition, we will provide a set of exploratory analyses regarding drug effects on metacognitive bias, subjective ratings after task completion and the relationship between baseline questions and our main outcomes (see table \ref{subj_assessments} for the respective items). Specifically, we will assess the effect of psilocybin on metacognitive bias by calculating the mean confidence per subject and session and analyze these with a repeated-measures ANOVA. 
+%For metacognitive efficiency, we will employ the hierarchical Bayesian model developed in \textcite{fleming2017hmeta}.
+For changes in felt heartbeat strength, location and valence we will analyze the respective ratings with a repeated-measures ANOVA. The drawn indication of felt heart beat location on paper will be quantified by measuring the filled-out space with the open-source image processing library OpenCV and in-house python scripts \parencite{opencv_library}. In short, we will first digitize the filled-out drawings, convert the images to grayscale and binarize them at a threshold, find the contours of connected areas and then calculate their size. 
+Lastly, we will conduct a set of exploratory analyses in order to generate initial insights into the relationship between subject-level changes in psychometric slope with the baseline questions (see table \ref{design_table}). Regarding the relationship between the baseline questions and subject-level changes in psychometric threshold and slope, we will employ a simple linear regression between each two variables or two sample t-tests between any two groups generated by one of the baseline questions, where appropriate. 
+
+
+% full model 
+\begin{comment}
+\begin{align*}
+%% FULL MODEL %%
+% \Phi is actually reserved for the cumulative normal
+% response on trial t
+%r_{kij} &\sim Bern(P_{kij})\\ 
+r_{kij} &\sim Bern(P(x_{kij};\lambda_{ki}, \alpha_{ki}, \beta_{ki})) \\
+r_{kij} \sim Binom(P(x_{kij}, n_{kij};\lambda_{ki}, \alpha_{ki}, \beta_{ki})) \\
+% probability that goes into the bernoulli/binomial
+P_{kij}(x_{kij};\lambda_{ki}, \alpha_{ki}, \beta_{ki}) &= \lambda_{ki} + (1 - 2 \lambda_{ki}) \cdot \Phi(x_{kij};\alpha_{ki}, \beta_{ki}) \\
+%P_{kij} &= \lambda_{ki} + (1-2\lambda_{ki}) \cdot \Phi(x_{kij}; \alpha_{ki}, \beta_{ki}) \\
+%P_{kij} &= F(x_{kij}, \alpha_{ki}, \beta_{ki}, \lambda_{ki}) \\
+% function implementing the lapse rate, giving P
+%F(x_{kij}, \alpha_{ki}, \beta_{ki}, \lambda_{ki}) &= \lambda_{ki} + (1-2\lambda_{ki}) \cdot \Phi(x_{kij}; \alpha_{ki}, \beta_{ki}) \\
+% cumulative gaussian
+\Phi(x_{kij}; \alpha_{ki}, \beta_{ki}) &= \frac{1}{2} + \frac{1}{2} \cdot \left(1+erf\left(\frac{x_{kij}-\alpha_{ki}}{\beta_{ki} \cdot \sqrt{2}}\right)\right) \\
+% treatment of parameters
+% \alpha_{ki} &\sim \alpha_{k} \\
+% \beta_{ki} &\sim \beta_{k} \\
+% \lambda_{ki} &\sim \lambda_{k} \\ 
+% \alpha_{k} &= \alpha_{Pl} + C_1 \Delta\alpha_{k} + C_2 \Delta\alpha_{k} \\
+% \beta_{k} &= \exp(\beta_{Pl} + C_1 \Delta\beta_{k} + C_2 \Delta\beta_{k}) \\
+% \lambda_{k} &= \text{logit}^{-1}(\lambda_{Pl} + C_1 \Delta\lambda_{k} + C_2 \Delta\lambda_{k})/2\\
+% more concise
+\alpha_{ki} &\sim  \alpha_{Pl} + C_1 \Delta\alpha_{k} + C_2 \Delta\alpha_{k} \\
+\beta_{ki} &\sim \exp(\beta_{Pl} + C_1 \Delta\beta_{k} + C_2 \Delta\beta_{k}) \\
+\lambda_{ki} &\sim \text{logit}^{-1}(\lambda_{Pl} + C_1 \Delta\lambda_{k} + C_2 \Delta\lambda_{k})/2\\ 
+k &:= \{0, 1, 2\} \\
+C_1 &:= \begin{cases}
+    1,& \text{if } k = 1\\
+    0,& \text{otherwise}
+\end{cases} \\
+C_2 &:= \begin{cases}
+    1,& \text{if } k = 2\\
+    0,& \text{otherwise}
+\end{cases} \\
+\begin{pmatrix}
+\alpha_{Pl} \\ 
+\beta_{Pl} \\ 
+\lambda_{Pl} \\ 
+\Delta\alpha_{k} \\ 
+\Delta\beta_{k} \\ 
+\Delta\lambda_{k} \\ 
+% parameters to fit and covariance matrix
+\end{pmatrix}
+&\sim
+\mathcal{N}
+\left(
+\begin{pmatrix}
+\mu_{\alpha_{Pl}} \\ 
+\mu_{\beta_{Pl}} \\ 
+\mu_{\lambda_{Pl}} \\ 
+\mu_{\Delta\alpha_{k}} \\ 
+\mu_{\Delta\beta_{k}} \\ 
+\mu_{\Delta\lambda_{k}} \\ 
+\end{pmatrix},
+\begin{bmatrix}
+\sigma_{\alpha_{Pl}}^2 & . & . & . & . & . &.\\
+. & \sigma_{\beta_{Pl}}^2 & . & . & . & . & .\\
+. & . & \sigma_{\lambda_{Pl}}^2 &  . & . & . & .\\
+. & . & . & \sigma_{\Delta\alpha_{k}}^2 & . & . &.\\
+. & . & . & . & \sigma_{\Delta\beta_{k}}^2 & . &.\\
+. & . & . & . & . & \sigma_{\Delta\lambda_{k}}^2 &.\\
+\end{bmatrix}\right) \\
+%% Priors
+\mu_{\alpha_{Pl}} &\sim \mathcal{N}\left(0,20\right) \\
+\mu_{\beta_{Pl}}  &\sim \mathcal{N} \left(0,3\right) \\
+\mu_{\lambda_{Pl}}&\sim \mathcal{N} \left(-3,2\right) \\
+\mu_{\Delta\alpha_{k}} &\sim \mathcal{N} \left(0,5\right) \\ 
+\mu_{\Delta\beta_{k}} &\sim \mathcal{N} \left(0,5\right)\\ 
+\mu_{\Delta\lambda_{k}} &\sim \mathcal{N} \left(0,5\right)\\ 
+\sigma_{\alpha_{Pl}} &\sim \mathcal{N}^+ \left(0,10\right) \\
+\sigma_{\beta_{Pl}} &\sim \mathcal{N}^+\left(0,3\right) \\
+\sigma_{\lambda_{Pl}}&\sim\mathcal{N}^+\left(0,3\right) \\
+\sigma_{\Delta\alpha_{k}} &\sim \mathcal{N} \left(0,5\right) \\ 
+\sigma_{\Delta\beta_{k}} &\sim \mathcal{N} \left(0,5\right)\\ 
+\sigma_{\Delta\lambda_{k}} &\sim \mathcal{N} \left(0,5\right)\\ 
+L &\sim LKJ \left(2\right)
+\end{align*}
+\end{comment}
+
+\section{Data availability}
+\begin{comment}
+    For Registered Reports, public sharing of data and materials upon acceptance for publication of the Stage 2 manuscript is mandatory. Please include a statement committing to sharing your raw data and materials on acceptance of your Stage 2 manuscript. Please deposit any pilot data that you may have already collected. Pilot data should be made accessible for peer-review, but can be placed under embargo until Stage 2 acceptance. 
+\end{comment}
+
+We hereby commit to publicly sharing the raw data that will be collected for the purposes of this study upon acceptance for publication of the Stage 2 manuscript in accordance with the FAIR-principles in an open science framework (OSF) repository.
+
+\section{Code availability}
+\begin{comment}
+    For Registered Reports, public sharing of all code upon acceptance for publication of the Stage 2 manuscript is mandatory. Please include a statement committing to sharing all code on acceptance of your Stage 2 manuscript. The Code availability statement must be included separately from the Data availability statement. Please provide a link (e.g. GitHub, osf) to a live version of your code. Code used to simulate data, conduct power analyses, and analyse pilot data should be made accessible in the same location. The code must be made available for peer-review, but can be placed under public embargo until Stage 2 acceptance.
+\end{comment}
+We hereby commit to publicly sharing all code that will be used for the purposes of this study in accordance with the FAIR-principles on a open GitHub repository. This includes code used for analyses and pilot analyses, simulating data and conducting power analyses. A live version of the repository is made accessible under the following link for peer-review: https://github.com/JesperFischer/The-effect-of-psilocybin-on-interoception-using-the-heart-rate-discrimination-task. Any larger files and data will be provided through an OSF repository under the following link: XXYXYYXY.
+
+\section{Author Contributions}
+% According to CRediT
+XF: Conceptualization, Data Curation, Formal Analysis, Funding Acquisition, Investigation, Methodology, Project Administration, Visualization, Writing – Original Draft, Writing – Review \& Editing
+JFE: Formal Analysis, Methodology, Software, Visualization, Writing – Original Draft, Writing – Review \& Editing
+JM: Conceptualization, Writing – Review \& Editing
+SH: Conceptualization, Methodology, Supervision, Writing – Review \& Editing
+MA: Methodology, Resources, Supervision, Writing – Review \& Editing
+MvE: Conceptualization, Funding Acquisition, Project Administration, Resources, Supervision, Writing – Original Draft, Writing – Review \& Editing
+
+
+\printbibliography
+
+
+\end{document}
+

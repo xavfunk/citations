@@ -1,0 +1,58 @@
+@misc{ema-ket,
+title    = "Assessment report: Spravato",
+  author   = "Committee for Medicinal Products for Human Use (CHMP)",
+  month    =  nov,
+  year     =  2019,
+  publisher="European Medicines Agency",
+  language = "en"
+}
+
+
+@article{dyer1973vasoconstriction,
+  title={Vasoconstriction produced by hallucinogens on isolated human and sheep umbilical vasculature},
+  author={Dyer, DC and Gant, DW},
+  journal={Journal of Pharmacology and Experimental Therapeutics},
+  volume={184},
+  number={2},
+  pages={366--375},
+  year={1973},
+  publisher={ASPET}
+}
+
+
+@article{verdejo2012role_intero_add,
+  title={The role of interoception in addiction: a critical review},
+  author={Verdejo-Garcia, Antonio and Clark, Luke and Dunn, Barnaby D},
+  journal={Neuroscience \& Biobehavioral Reviews},
+  volume={36},
+  number={8},
+  pages={1857--1869},
+  year={2012},
+  publisher={Elsevier}
+}
+
+
+@article{opencv_library,
+    author = {Bradski, G.},
+    citeulike-article-id = {2236121},
+    journal = {Dr. Dobb's Journal of Software Tools},
+    keywords = {bibtex-import},
+    posted-at = {2008-01-15 19:21:54},
+    priority = {4},
+    title = {{The OpenCV Library}},
+    year = {2000}}
+
+
+@article{fleming2017hmeta,
+  title={HMeta-d: hierarchical Bayesian estimation of metacognitive efficiency from confidence ratings},
+  author={Fleming, Stephen M},
+  journal={Neuroscience of consciousness},
+  volume={2017},
+  number={1},
+  pages={nix007},
+  year={2017},
+  publisher={Oxford University Press}
+}
+
+
+
